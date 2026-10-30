@@ -1,0 +1,1214 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  color: #3F3D56;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --dark: #3F3D56;
+  --pink: #EE2EFF;
+  --gray: #828282;
+  --light-gray: #ECEFF2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  font-size: 12px;
+  background: #ffffff;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+/* =========================================
+   ESTRUTURA PRINCIPAL
+   ========================================= */
+
+.app-shell {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background: #ffffff;
+}
+
+.main-content {
+  position: relative;
+  flex: 1 0 auto;
+  width: 100%;
+  min-width: 0;
+}
+
+/* =========================================
+   PÁGINA INICIAL — RESPONSIVA
+   ========================================= */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 1024px);
+  min-height: 0;
+  margin: 0 auto;
+  padding: 64px 20px 24px;
+  text-align: center;
+}
+
+.home-illustration {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: min(350px, 100%);
+  height: auto;
+  aspect-ratio: 350 / 238;
+  margin: 0 auto 32px;
+}
+
+.travel-illustration {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.home-title {
+  position: relative;
+  width: min(494px, 100%);
+  min-height: 40px;
+  margin: 0 auto 16px;
+  color: var(--dark);
+  font-family: 'Dosis', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0;
+  text-align: center;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  overflow-wrap: anywhere;
+}
+
+.home-title span {
+  color: var(--pink);
+  font-weight: 700;
+}
+
+.home-description {
+  position: relative;
+  width: min(540px, 100%);
+  margin: 0 auto;
+  color: var(--gray);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+.home-description p {
+  position: static;
+  width: 100%;
+  margin: 0 0 15px;
+  line-height: 22px;
+  transform: none;
+}
+
+.home-description p:nth-child(3) {
+  position: static;
+  width: min(626px, 100%);
+  margin: 0 auto 15px;
+  line-height: 20px;
+  transform: none;
+}
+
+.home-description strong {
+  color: var(--gray);
+  font-weight: 700;
+}
+
+/* =========================================
+   NAVEGAÇÃO PRINCIPAL
+   ========================================= */
+
+.page-nav {
+  position: relative;
+  display: flex;
+  flex: 0 0 72px;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  width: min(391px, calc(100% - 32px));
+  min-height: 72px;
+  margin: 0 auto;
+  padding: 8px 0;
+  border-top: 1px solid var(--light-gray);
+  background: #ffffff;
+}
+
+.page-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0;
+  color: var(--dark);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.page-nav a:hover,
+.page-nav a.active {
+  color: var(--pink);
+}
+
+/* =========================================
+   RODAPÉ — LARGURA TOTAL DA TELA
+   ========================================= */
+
+.site-footer {
+  position: relative;
+  left: 50%;
+  z-index: 0;
+  flex: 0 0 104px;
+  width: 100vw;
+  max-width: 100vw;
+  height: 104px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  transform: translateX(-50%);
+  background: #ffffff;
+}
+
+.footer-wave {
+  display: block;
+  width: 100%;
+  height: 104px;
+  max-width: none;
+}
+
+/* =========================================
+   PÁGINAS SECUNDÁRIAS
+   ========================================= */
+
+.content-page {
+  width: min(calc(100% - 36px), 900px);
+  margin: 0 auto;
+  padding: 78px 0 40px;
+  color: var(--dark);
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.page-heading {
+  width: 100%;
+  max-width: 626px;
+  margin: 0 auto 30px;
+}
+
+.section-kicker {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--gray);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.page-heading h1 {
+  margin: 0 0 16px;
+  color: var(--dark);
+  font-family: 'Dosis', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+  overflow-wrap: anywhere;
+}
+
+.page-heading h1 span {
+  color: var(--pink);
+  font-weight: 700;
+}
+
+.page-heading p {
+  max-width: 540px;
+  margin: 0 auto;
+  color: var(--gray);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+/* =========================================
+   DESTINOS E OFERTAS
+   ========================================= */
+
+.destination-grid,
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin: 28px auto;
+  text-align: left;
+}
+
+.place-card,
+.offer-card {
+  min-width: 0;
+  padding: 0 0 14px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--light-gray);
+  background: #ffffff;
+}
+
+.place-art,
+.offer-art {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 110px;
+  margin-bottom: 14px;
+  background: var(--light-gray);
+  color: var(--dark);
+  font-size: 27px;
+}
+
+.rio {
+  background: #ECEFF2;
+}
+
+.paris {
+  background: #f6e8f8;
+}
+
+.tokyo {
+  background: #eee9fa;
+}
+
+.offer-purple {
+  background: #eee9fa;
+}
+
+.offer-pink {
+  background: #f9e8fb;
+}
+
+.offer-blue {
+  background: #e8eff4;
+}
+
+.place-info,
+.offer-info {
+  min-width: 0;
+  padding: 0;
+}
+
+.mini-label,
+.price-label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--gray);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.place-info h2,
+.offer-info h2 {
+  margin: 0 0 8px;
+  color: var(--dark);
+  font-family: 'Dosis', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.place-info p,
+.offer-info > p {
+  margin: 0 0 12px;
+  color: var(--gray);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.text-link,
+.offer-button {
+  display: inline-block;
+  color: var(--dark);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.text-link:hover,
+.offer-button:hover {
+  color: var(--pink);
+}
+
+.offer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+.offer-bottom strong {
+  color: var(--dark);
+  font-family: 'Dosis', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.disclaimer {
+  margin: 20px auto;
+  color: var(--gray);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+/* =========================================
+   CHAMADA PARA AÇÃO
+   ========================================= */
+
+.page-cta {
+  width: 100%;
+  margin: 28px auto 0;
+  padding: 20px;
+  background: #f8f7fa;
+  text-align: center;
+}
+
+.page-cta h2 {
+  margin: 0 0 9px;
+  color: var(--dark);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.page-cta p {
+  color: var(--gray);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 9px 16px;
+  border: 1px solid var(--dark);
+  border-radius: 3px;
+  background: var(--dark);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: center;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.button-primary:hover {
+  border-color: var(--pink);
+  background: var(--pink);
+  color: #ffffff;
+}
+
+.button-secondary {
+  background: #ffffff;
+  color: var(--dark);
+}
+
+.button-secondary:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+/* =========================================
+   CONTATO
+   ========================================= */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 26px;
+  width: min(100%, 760px);
+  margin: 25px auto;
+  text-align: left;
+}
+
+.contact-aside {
+  min-width: 0;
+  padding: 20px;
+  background: #f7f6fa;
+}
+
+.contact-symbol {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--pink);
+  font-size: 25px;
+}
+
+.contact-aside h2 {
+  margin: 0 0 12px;
+  color: var(--dark);
+  font-family: 'Dosis', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.contact-aside > p,
+.contact-highlight {
+  color: var(--gray);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.contact-highlight {
+  padding-top: 12px;
+  border-top: 1px solid #dedbe5;
+}
+
+.contact-highlight span {
+  color: var(--pink);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.contact-form label {
+  color: var(--dark);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid #d9d6e0;
+  border-radius: 0;
+  background: #ffffff;
+  color: var(--dark);
+  font-size: 13px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 1px solid var(--pink);
+  border-color: var(--pink);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-button {
+  align-self: flex-start;
+  margin-top: 5px;
+}
+
+.form-feedback {
+  padding: 10px;
+  background: #f4f0fa;
+  color: var(--dark);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   BOTÃO VOLTAR PARA A PÁGINA INICIAL
+   ========================================= */
+
+.back-home-wrap {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: max(20px, calc((100% - 900px) / 2));
+}
+
+.back-home-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 7px 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  background: #ffffff;
+  color: var(--dark);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.back-home-arrow {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.back-home-link:hover {
+  border-color: var(--pink);
+  background: #fff7ff;
+  color: var(--pink);
+}
+
+.back-home-link:focus-visible {
+  outline: 2px solid var(--pink);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   RESPONSIVIDADE — TABLETS
+   ========================================= */
+
+@media (max-width: 1023px) {
+  .home-page {
+    width: 100%;
+    min-height: 0;
+    padding: 40px 24px 24px;
+  }
+
+  .home-illustration {
+    width: min(350px, 100%);
+    margin-bottom: 20px;
+  }
+
+  .home-title {
+    width: 100%;
+    max-width: 600px;
+    min-height: 0;
+    margin-bottom: 16px;
+    font-size: clamp(25px, 4vw, 32px);
+    line-height: 1.3;
+  }
+
+  .home-description {
+    width: min(540px, 100%);
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .home-description p {
+    width: 100%;
+    margin-bottom: 16px;
+    line-height: 22px;
+  }
+
+  .home-description p:nth-child(3) {
+    width: 100%;
+    margin: 0 auto 16px;
+    line-height: 22px;
+  }
+
+  .page-nav {
+    flex-basis: auto;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    min-height: 60px;
+  }
+
+  .page-nav a {
+    min-height: 36px;
+    font-size: 13px;
+  }
+
+  .content-page {
+    width: min(calc(100% - 40px), 800px);
+    padding-top: 76px;
+  }
+
+  .page-heading {
+    max-width: 626px;
+  }
+
+  .page-heading h1 {
+    font-size: clamp(27px, 4vw, 32px);
+    line-height: 1.3;
+  }
+
+  .page-heading p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .destination-grid,
+  .offer-grid {
+    gap: 18px;
+  }
+
+  .contact-layout {
+    gap: 20px;
+  }
+
+  .back-home-wrap {
+    top: 16px;
+    left: 20px;
+  }
+}
+
+/* =========================================
+   RESPONSIVIDADE — CELULARES
+   ========================================= */
+
+@media (max-width: 640px) {
+  .home-page {
+    padding: 28px 18px 24px;
+  }
+
+  .home-illustration {
+    width: min(300px, 100%);
+    margin-bottom: 18px;
+  }
+
+  .home-title {
+    margin-bottom: 14px;
+    font-size: clamp(23px, 6vw, 28px);
+    line-height: 1.3;
+  }
+
+  .home-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .home-description p {
+    margin-bottom: 14px;
+    line-height: 22px;
+  }
+
+  .home-description p:nth-child(3) {
+    margin-bottom: 14px;
+    line-height: 22px;
+  }
+
+  .page-nav {
+    width: calc(100% - 32px);
+    gap: 8px 20px;
+    padding: 10px 0;
+  }
+
+  .page-nav a {
+    font-size: 12px;
+  }
+
+  .site-footer {
+    flex-basis: 75px;
+    height: 75px;
+  }
+
+  .footer-wave {
+    height: 75px;
+  }
+
+  .content-page {
+    width: calc(100% - 32px);
+    padding: 68px 0 32px;
+  }
+
+  .page-heading {
+    margin-bottom: 24px;
+  }
+
+  .section-kicker {
+    font-size: 11px;
+  }
+
+  .page-heading h1 {
+    margin-bottom: 12px;
+    font-size: 27px;
+    line-height: 1.3;
+  }
+
+  .page-heading p {
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .destination-grid,
+  .offer-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    max-width: 420px;
+    margin-top: 22px;
+  }
+
+  .place-art,
+  .offer-art {
+    height: 100px;
+  }
+
+  .place-info h2,
+  .offer-info h2 {
+    font-size: 21px;
+  }
+
+  .place-info p,
+  .offer-info > p {
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .contact-aside {
+    padding: 18px;
+  }
+
+  .contact-aside h2 {
+    font-size: 23px;
+  }
+
+  .contact-aside > p,
+  .contact-highlight {
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .submit-button {
+    align-self: stretch;
+    width: 100%;
+  }
+
+  .page-cta {
+    padding: 18px 14px;
+  }
+
+  .back-home-wrap {
+    top: 12px;
+    left: 16px;
+  }
+
+  .back-home-link {
+    min-height: 36px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .back-home-arrow {
+    font-size: 20px;
+  }
+}
+
+/* =========================================
+   CELULARES ESTREITOS
+   ========================================= */
+
+@media (max-width: 360px) {
+  .home-page {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .home-illustration {
+    width: 100%;
+    margin-bottom: 14px;
+  }
+
+  .home-title {
+    font-size: 23px;
+  }
+
+  .home-description {
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .home-description p,
+  .home-description p:nth-child(3) {
+    line-height: 21px;
+  }
+
+  .page-nav {
+    width: calc(100% - 24px);
+    gap: 6px 14px;
+  }
+
+  .page-nav a {
+    font-size: 11px;
+  }
+
+  .content-page {
+    width: calc(100% - 24px);
+    padding-top: 64px;
+  }
+
+  .page-heading h1 {
+    font-size: 25px;
+  }
+
+  .page-heading p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .contact-aside {
+    padding: 14px;
+  }
+
+  .back-home-wrap {
+    left: 12px;
+  }
+}
+
+/* =========================================
+   TELAS GRANDES
+   ========================================= */
+
+@media (min-width: 1400px) {
+  .home-page {
+    width: min(100%, 1024px);
+  }
+
+  .content-page {
+    max-width: 1000px;
+  }
+}
+
+/* =========================================================
+   CONNECTFLIGHT — CORREÇÕES DE DESTINOS E OFERTAS
+   Cartões padronizados, imagens proporcionais e responsividade.
+   ========================================================= */
+
+.destination-grid,
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 24px;
+  width: 100%;
+  margin: 28px auto;
+  text-align: left;
+}
+
+.place-card,
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  padding: 0 0 14px;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--light-gray);
+  border-radius: 12px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.place-art,
+.offer-art {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  overflow: hidden;
+  background: var(--light-gray);
+  color: var(--dark);
+}
+
+.place-art img,
+.offer-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.place-card:hover .place-art img,
+.offer-card:hover .offer-art img {
+  transform: scale(1.05);
+}
+
+.place-info,
+.offer-info {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 18px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.mini-label,
+.price-label {
+  display: block;
+  margin: 0;
+  color: var(--gray);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.place-info h2,
+.offer-info h2 {
+  margin: 0;
+  color: var(--dark);
+  font-family: 'Dosis', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.place-info p,
+.offer-info > p {
+  margin: 0 0 4px;
+  color: var(--gray);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.text-link,
+.offer-button {
+  display: inline-block;
+  color: var(--dark);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.text-link:hover,
+.offer-button:hover {
+  color: var(--pink);
+}
+
+.offer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.offer-bottom strong {
+  color: var(--dark);
+  font-family: 'Dosis', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.disclaimer {
+  margin: 20px auto;
+  color: var(--gray);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+/* Tablets: duas colunas */
+
+@media (max-width: 1023px) {
+  .destination-grid,
+  .offer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+/* Celulares: uma coluna */
+
+@media (max-width: 640px) {
+  .destination-grid,
+  .offer-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    width: 100%;
+    max-width: 420px;
+    margin: 22px auto;
+  }
+
+  .place-card,
+  .offer-card {
+    width: 100%;
+  }
+
+  .place-art,
+  .offer-art {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .place-info,
+  .offer-info {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .place-info h2,
+  .offer-info h2 {
+    font-size: 21px;
+    line-height: 1.35;
+  }
+
+  .place-info p,
+  .offer-info > p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .disclaimer {
+    margin: 20px auto;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+
+/* Celulares estreitos */
+
+@media (max-width: 360px) {
+  .destination-grid,
+  .offer-grid {
+    gap: 18px;
+  }
+
+  .place-info,
+  .offer-info {
+    padding: 14px;
+  }
+
+  .place-info h2,
+  .offer-info h2 {
+    font-size: 20px;
+  }
+
+  .place-info p,
+  .offer-info > p {
+    font-size: 12px;
+  }
+}
+
+/* Respeita a preferência por movimento reduzido */
+
+@media (prefers-reduced-motion: reduce) {
+  .place-art img,
+  .offer-art img {
+    transition: none;
+  }
+
+  .place-card:hover .place-art img,
+  .offer-card:hover .offer-art img {
+    transform: none;
+  }
+}
